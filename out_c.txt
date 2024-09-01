@@ -1,0 +1,4 @@
+> reduce in MCS-ADAP-CHECK : modelCheck(init, [] (nrc -> (~ (inCs(p1) /\ inCs(p2))))) .
+reduce in MCS-ADAP-CHECK : modelCheck(init, [](nrc -> ~ (inCs(p1) /\ inCs(p2)))) .
+rewrites: 5964801 in 42456ms cpu (41650ms real) (140492 rewrites/second)
+result Bool: true
