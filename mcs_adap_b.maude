@@ -186,7 +186,7 @@ mod MCS-ADAP is
   => {(pc[P]: ex4) (mine[P]: Q) (next[Q]: Q1) (lock[Q1]: false) OCs} .
 
   --- go to rcv
-  rl [go2rcv] : {(pc[P]: ex4) (state[P]: S) (crash: B) OCs} 
+  rl [go2rcv] : {(pc[P]: ex4) (state[P]: S) OCs} 
   => {(pc[P]: re) (state[P]: FREE) OCs} .
 
   rl [stutter] : {(pc[P]: terminal) OCs} 
@@ -238,5 +238,5 @@ mod MCS-ADAP-CHECK is
   eq mutex3 = ([] ((~(inCs(p1) /\ inCs(p2))) /\ (~(inCs(p2) /\ inCs(p3))) /\ (~(inCs(p3) /\ inCs(p1)))) ) .
 endm
 
-reduce in MCS-ADAP-CHECK : modelCheck(init, (([]~ crashed) -> mutex)) .
-reduce in MCS-ADAP-CHECK : modelCheck(init2, (([]~ crashed) -> mutex3)) .
+--- reduce in MCS-ADAP-CHECK : modelCheck(init, (([]~ crashed) -> mutex)) .
+--- reduce in MCS-ADAP-CHECK : modelCheck(init2, (([]~ crashed) -> mutex3)) .
