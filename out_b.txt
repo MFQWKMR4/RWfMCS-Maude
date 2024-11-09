@@ -1,4 +1,4 @@
-> reduce in MCS-ADAP-CHECK : modelCheck(init, (([]~ crashed) -> mutex)) .
+Maude> reduce in MCS-ADAP-CHECK : modelCheck(init, (([]~ crashed) -> mutex)) .
 reduce in MCS-ADAP-CHECK : modelCheck(init, []~ crashed -> mutex) .
-rewrites: 13046 in 38ms cpu (39ms real) (337533 rewrites/second)
+rewrites: 1217421 in 2369ms cpu (2392ms real) (513710 rewrites/second)
 result Bool: true
